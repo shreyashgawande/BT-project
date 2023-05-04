@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=PT+Serif:ital@1&family=Sarabun:wght@300&family=Ubuntu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+ 
+    &::-webkit-scrollbar {display: none};
+}
+
+
+body{
+
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 20px;
+    z-index: 999;
+    padding-right: 50px;
+    /* background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 100%); */
+    /* border-radius: 20px; */
+    /* -webkit-backdrop-filter: blur(05px); */
+    /* backdrop-filter: blur(05px); */
+}
+
+.navbar a {
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+
+}
+
+.navbar a:hover {
+    text-decoration:underline;
+}
+
+.navbar #logo {
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    transition: all 0.3s ease;
+    margin-right: 45%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#home{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 200px;
+    height: 550px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+#home::before{
+    content: "";
+    background: url("../images/IPFS2.jpg") no-repeat top center/cover;
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    opacity: 0.93;
+}
+.files{
+    height: 75%;
+    width: 65rem;
+    align-items: center;
+    /* background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 100%);
+     */
+     background-color: #37349c34;
+    
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(05px);
+    backdrop-filter: blur(05px);
+    margin-top: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 3px gray;
+    gap: 1.3rem;
+  
+  /* border: .1rem solid #F8f8f8 ; */
+  }
+.sect1{
+    width: 100vw;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+   
+
+}
+
+.sect1_01{
+    width: 60vw;
+    gap: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sect1_01 h1{
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 6rem;
+    margin-right: 250px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: justify;
+
+}
+
+.sect1_01 p{
+    width: 50vw;
+    font-size: 1.3rem;
+    margin-right: 01rem;
+    padding-top:1rem ;
+    margin-right: 60px;
+    padding-bottom: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: justify;
+
+}
+
+.sect1 .btn1{
+    width: 10rem;
+    height: 2.6rem;
+    outline: none;
+    border-radius: 1rem;
+    background-color: rgb(53, 33, 139);
+    font-size: 1.4rem;
+    border: none;
+    box-shadow: 1px 1px 3px;
+    /* outline: 2px solid rgb(183, 0, 255); */
+
+   transition: all 1s ease-in-out;
+ 
+ 
+}
+.sect1 .btn1 a{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.sect1 .btn1:hover{
+    background-color: rgb(18, 3, 83);
+    cursor: pointer;   
+}
+
+
+.sect1_btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-right: 28rem;
+    margin-top: 1rem;
+    
+    
+}
+
+.sect1 .btn2{
+    width: 10rem;
+    height: 2.6rem;
+    outline: none;
+    border-radius: 1rem;
+    background-color: rgb(53, 33, 139);
+    font-size: 1.4rem;
+    border: none;
+    box-shadow: 1px 1px 3px;
+    /* outline: 2px solid rgb(183, 0, 255); */
+
+   transition: all 1s ease-in-out;
+    
+}
+.sect1 .btn2 a{
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.sect1 .btn2:hover{
+    background-color: rgb(18, 3, 83);
+    cursor: pointer;     
+}
+
+.lottie{
+    width: 36rem;
+    height: 35rem;
+
+}
+
+.shadow{
+    position: absolute;
+    top: -9rem;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(90deg, #1e87dd 0%, #677dfc 100%);
+  filter: blur(900px);
+    z-index: 0;
+    opacity: .6;
+}
+
+.shadow1,.shadow2{
+    position: absolute;
+    top: 30vh;
+    right: 25vh;
+    width: 380px;
+    height: 380px;
+    /* background: linear-gradient(180deg, rgba(49, 14, 153, 0.527) 0%, #125da3 100%); */
+    filter: blur(123px);
+    opacity: .6;
+    animation: shadow 5s infinite ease-in-out;
+}
+
+.shadow2{
+    top: 40vh;
+    background: rgba(26, 168, 211, 0.6);
+  filter: blur(750px);
+  right: 20vh;
+  opacity: .4;
+}
+
+.shadow3{
+    height: 40vh;
+    width: 40vw;
+    position: absolute;
+    top: 70vh;
+    left: -20vh;
+    background: linear-gradient(180deg, rgba(20, 9, 168, 0.137) 0%, #812eb1d8 100%);
+    filter: blur(123px);
+    opacity: .4;
+    animation: shadow 5s infinite ease-in-out;
+}
+
+
+ #active {
+    color: black;
+    padding: 4px;
+    background-color: white;
+    width: 80px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Upload</title>
+    <link href="/css/upload.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script type="module" src="/store.js" ></script>
+</head>
+
+<body id="CID">
+    <div class="alan-btn"></div>
+    <script type="text/javascript">
+        //checking for metamask
+        var account = null;
+        (async () => {
+            if (window.ethereum) {
+                await window.ethereum.send('eth_requestAccounts');
+                window.web3 = new Web3(window.ethereum);
+
+                var accounts = await web3.eth.getAccounts();
+                account = accounts[0];
+                console.log("Active");
+            }
+
+            else {
+                window.alert("Please install MetaMask to login!")
+                window.location.replace("/html/login.html");
+            }
+        })();
+    </script>
+
+
+<!-- Navbar  -->
+
+     <div class="navbar">
+        <span id="logo">IPFS Blockdump</span>
+        <a href="/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        <a href="#">Docs</a>
+        <a href="/html/dashboard.html" id="active">Dashboard</a>
+    </div>
+
+
+<!-- Main -->
+    
+    <div class="main">
+    <div class="glass">
+        <h1>Upload A File</h1>
+        <h2>Add a new file over FileCoin Web3 Storage.</h2><br>
+        <form name="upload">
+          <input type="text" name="name" id="name" placeholder="Filename" required>
+            <input type="file" name="file" id="file" required>
+
+            <div class="btn">
+              <button type="button" id="submit">Upload</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+</body>
+
+</html>

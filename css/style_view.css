@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=PT+Serif:ital@1&family=Sarabun:wght@300&family=Ubuntu:wght@300&display=swap');
+
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    
+    &::-webkit-scrollbar{
+        display: none;
+      }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+    color: #FFFFFF;
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+a {
+    color: #FFFFFF;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/* Navbar */
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 20px;
+    z-index: 999;
+    padding-right: 50px;
+    /* background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 100%); */
+    /* border-radius: 20px; */
+    /* -webkit-backdrop-filter: blur(05px); */
+    /* backdrop-filter: blur(05px); */
+}
+
+.navbar a {
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    text-decoration:underline;
+}
+
+.navbar #logo {
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    transition: all 0.3s ease;
+    margin-right: 45%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+
+/* Main   */
+
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #38349c;
+}
+
+
+.main h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-top: 0%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin-top: 5px;
+    color: #F8f8f8;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 2rem;
+
+}
+
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+input {
+    width: 20rem;
+    height: 35px;
+    margin-top: 5px;
+    /* padding: 5px 20px; */
+    padding: 1px 5px;
+    background-color: #ffffff;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.files {
+    height: 50%;
+    width: 55rem;
+    align-items: center;
+    background-color: #37349c34;
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(05px);
+    backdrop-filter: blur(05px);
+    margin-top: 3%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6rem;
+    border: .1rem solid #F8f8f8 ;
+    box-shadow: 1px 1px 2px;
+
+}
+
+
+
+.main span#button_flex {
+    display: flex;
+
+    align-items: center;
+    flex-direction: row;
+    /* margin-left: 7rem; */
+}
+
+.main button {
+    width: 50%;
+    height: 40px;
+    margin-top: 25px;
+    padding: 5px 20px;
+    border: none;
+    background-color: #1b94f7;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.main button:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* active  */
+
+#active {
+    color: black;
+    padding: 4px;
+    background-color: white;
+    width: 100px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+

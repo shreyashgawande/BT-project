@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="/css/style_login.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+  </head>
+
+  <body id="LOGIN">
+    <script type="text/javascript">
+      //checking for metamask
+      function initial(params) {
+        var account = null;
+        (async () => {
+          if (window.ethereum) {
+            await window.ethereum.send("eth_requestAccounts");
+            window.web3 = new Web3(window.ethereum);
+
+            var accounts = await web3.eth.getAccounts();
+            account = accounts[0];
+            
+            // window.alert("Successfully Logged In!");
+          setTimeout(function (){
+            const main =document.getElementById('main');
+            const html ='<h1>"Loading! Plaese Wait..."</h1>';
+            main.innerHTML=html;
+            setTimeout(function (){
+              window.location.replace("/html/access.html");
+            },500)
+          },1000);
+            
+          } else {
+            window.alert("Please install MetaMask to login!");
+            window.open("https://metamask.io/download/","_blank");
+          }
+        })();
+      }
+
+      initial();
+    </script>
+    <div class="navbar">
+      <span id="logo">IPFS Blockdump</span>
+      <a href="/index.html">Home</a>
+      <a href="/html/about.html">About</a>
+     
+      <a href="/html/login.html" id="active">Login</a>
+    </div>
+
+  <div class="main" id="main">
+  <div class="files">
+
+    <h1>Welcome Back!</h1>
+    <h2>Login with MetaMask</h2>
+    <button onclick="initial()">Login</button>
+    <div class="newuser">
+      <span>New User?</span>
+      <a href="https://metamask.io/">Register Here</a>
+    </div>
+  </div>
+    </div>
+
+
+  </body>
+</html>

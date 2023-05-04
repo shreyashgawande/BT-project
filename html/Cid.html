@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>VIEW FILES</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="/css/style_cid.css" rel="stylesheet" type="text/css" />
+    
+  </head>
+
+  <body id="CID">
+
+       <script type="text/javascript">
+      //checking for metamask
+      var account = null;
+      (async () => {
+        if (window.ethereum) {
+          await window.ethereum.send("eth_requestAccounts");
+          window.web3 = new Web3(window.ethereum);
+
+          var accounts = await web3.eth.getAccounts();
+          account = accounts[0];
+          console.log("Active");
+        } else {
+          window.alert("Please install MetaMask to login!");
+          window.location.replace("/html/login.html");
+        }
+      })();
+    </script>
+   
+
+
+    <div class="alan-btn"></div>
+
+    <div class="navbar">
+      <span id="logo">IPFS Blockdump</span>
+      <a href="/index.html">Home</a>
+      <a href="/html/about.html">About</a>
+      <a href="#">Docs</a>
+      <a href="/html/dashboard.html" id="active">Dashboard</a>
+    </div>
+
+    <div class="main">
+        <h1>View Files</h1>
+         <div class="cidli" id="output">
+          <div id="loader"> </div>
+          <table id="table">
+            <thead>
+              <tr>
+                <th align="center">Name</th>
+                <th class="created" align="center">CID</th>
+                <th class="created">Created On</th>
+                <th class="open created">View File</th>
+              </tr>
+            </thead>
+            <tbody id="uploads" ></tbody>
+          </table>
+         
+        </div>
+        
+      </div>
+    </div>
+
+
+    <script type="module" src="../cid.js"></script>
+  </body>
+</html>

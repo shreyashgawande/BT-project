@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dashboard</title>
+    <link href="/css/style_dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js" ></script>
+    <script  src="/a.js"></script>
+    <script type="module" src="/retrive.js"></script>
+</head>
+
+<body id="DASH">
+    <div class="alan-btn"></div>
+
+    <!-- Metamask Authentication -->
+    <script type="text/javascript">
+        //checking for metamask
+        var account = null;
+        (async() => {
+            if(window.ethereum) {
+                await window.ethereum.send('eth_requestAccounts');
+                window.web3 = new Web3(window.ethereum);
+
+                var accounts = await web3.eth.getAccounts();
+                account = accounts[0];
+                console.log("Active");
+            }
+
+            else
+            {
+                window.alert("Please install MetaMask to login!")
+                window.location.replace("/html/login.html");
+            }
+        })();
+    </script>
+<!-- Metamask Authentication -->
+
+<!-- NavBar  -->
+    <div class="navbar">
+        <span id="logo">IPFS Blockdump</span>
+        <a href="/index.html">Home</a>
+        <a href="/html/about.html">About</a>
+        
+        <a href="/index.html" id="active">Logout</a>
+    </div>
+<!-- NavBar  -->
+
+<!-- Section  -->
+    <div class="main">
+        <h1>Dashboard</h1>
+        
+        <div class="dashboard">
+            <div class="upload">
+                <div id="DataKey">
+                    <h5>Upload the Files</h5>
+                </div>
+                <section class="inner">
+                        <img src="../images/uplaod.png" alt="" style="height: 160px
+                        ;width: 170px; margin-top: 10px; background: transparent;">  
+                </section>
+            <article>
+                <div id="button_flex">
+                    <a href="/html/upload.html"><button>Upload</button></a>
+                </div>
+            </article>
+            </div>
+
+            <div class="view">
+                <div id="DataKey">
+                    <h5>View File </h5>
+                </div>
+                <section class="inner">
+                    <img src="../images/view.png" alt="" style="height: 140px
+                        ;width: 140px; margin-top: 10px; background: transparent;">
+                 </section>
+            <article>
+                <div id="button_flex">
+                    <a href="/html/view.html"><button>View One</button></a>
+                </div>
+            </article>
+            </div>
+
+
+            <div class="Cid">
+                <div id="DataKey">
+                    <h5>View All</h1>
+                </div>
+                <section class="inner">
+                    <img src="../images/security.png" alt="" style="height: 160px
+                    ;width: 170px; margin-top: 10px; background: transparent;">                  </section>
+            <article>
+                <div id="button_flex">
+                    <a href="./Cid.html"><button>View All</button></a>
+                </div>
+            </article>
+            </div>
+        </div>
+</div>
+ 
+</body>
+
+</html>

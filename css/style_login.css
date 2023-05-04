@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=PT+Serif:ital@1&family=Sarabun:wght@300&family=Ubuntu:wght@300&display=swap');
+
+
+/* GENERAL */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {display: none};
+    
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  /* background-color: black; */
+  color: black;
+
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+/* NavBar */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 20px;
+  z-index: 999;
+  padding-right: 50px;
+  /* background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 100%); */
+  /* border-radius: 20px; */
+  /* -webkit-backdrop-filter: blur(05px); */
+  /* backdrop-filter: blur(05px); */
+}
+
+.navbar a {
+  margin-left: 5%;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  text-decoration:underline;
+}
+
+.navbar #logo {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+  transition: all 0.3s ease;
+  margin-right: 45%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+
+/* Main  */
+
+#main{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 200px;
+  height: 650px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+#main::before{
+  content: "";
+  background: url("../images/IPFS2.jpg") no-repeat top center/cover;
+  position: absolute;
+  height: 800px;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  opacity: 0.93;
+}
+.main {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* flex-direction: column; */
+  font-family: 'Ubuntu', sans-serif;
+ 
+}
+
+.main h1 {
+  font-size: 2.5rem;
+  /* margin-top: 10%; */
+}
+
+.main h2 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+}
+.main .newuser {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+    flex-direction: row;
+    width: 100%;
+}
+.main .newuser span {
+  font-size: 1rem;
+  font-weight: 50;
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+  padding-right: 0.2%;
+}
+
+.main .newuser a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: bolder;
+    color: white;
+    padding-left:0.2%;
+    opacity: 98%;
+}
+
+
+.files{
+  height: 50%;
+  width: 45rem;
+  align-items: center;
+  /* background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 100%);
+   */
+   background-color: #37349c34;
+  
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(05px);
+  backdrop-filter: blur(05px);
+  margin-top: 3%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 3px gray;
+  gap: 2rem;
+
+/* border: .1rem solid #F8f8f8 ; */
+}
+
+
+.main .newuser a:hover{
+    text-decoration: underline;
+    opacity: 100%;
+    color: #032dab;
+}
+.main button {
+  width: 10rem;
+  height: 2.6rem;
+  outline: none;
+  border-radius: 1rem;
+  background-color: rgb(53, 33, 139);
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow: 1px 1px 3px;
+  /* outline: 2px solid rgb(183, 0, 255); */
+
+ transition: all 1s ease-in-out;
+}
+.main button:hover {
+  background-color: rgb(18, 3, 83);
+  cursor: pointer; 
+}
+
+
+/* active  */
+
+#active {
+  color: black;
+  padding: 4px;
+  background-color: white;
+  width: 80px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+
+
